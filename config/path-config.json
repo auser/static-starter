@@ -13,8 +13,8 @@
   },
 
   "javascripts": {
-    "src": "javascripts",
-    "dest": "javascripts"
+    "src": "js",
+    "dest": "js"
   },
 
   "stylesheets": {

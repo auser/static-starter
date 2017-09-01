@@ -1,4 +1,5 @@
 const path = require('path');
+const paths = require('./path-config.json');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -6,7 +7,7 @@ const dotenv = require('dotenv');
 
 const rootPath = path.join(__dirname, '..');
 const rel = p => path.join(rootPath, p);
-const src = (...p) => path.join(rootPath, 'src', 'javascripts', ...p);
+const src = (...p) => path.join(rootPath, 'src', paths.javascripts.src, ...p);
 
 dotenv.config({path: rel(`.env.${NODE_ENV}`)});
 dotenv.config({path: rel('.env')});
